@@ -2,25 +2,25 @@ import type { InfoLdg } from "@/types";
 
 export const infos: InfoLdg[] = [
   {
-    title: "Empower your projects",
+    title: "SOCIAL FOR TWERKRZ",
     description:
-      "Unlock the full potential of your projects with our open-source SaaS platform. Collaborate seamlessly, innovate effortlessly, and scale limitlessly.",
+      "We are a social media platform designed for twerk enthusiasts. Our mission is to create a vibrant and inclusive tribe where twerk lovers can connect, share their passion, and celebrate the art of twerking.",
     image: "/images/blog/placeholder-about.jpg",
     list: [
       {
-        title: "Collaborative",
-        description: "Work together with your team members in real-time.",
+        title: "Remote Work",
+        description: "Work from home or anywhere in the world.",
         icon: "lucide:laptop",
       },
       {
-        title: "Innovative",
-        description: "Stay ahead of the curve with access constant updates.",
+        title: "Tokenized Content",
+        description: "One image tokenized as a digital asset sold for $90M.",
         icon: "lucide:settings",
       },
       {
-        title: "Scalable",
+        title: "Market",
         description:
-          "Our platform offers the scalability needed to adapt to your needs.",
+          "Discover 1-OF-1 Digital A$$et Collectibles and unique livestream experiences.",
         icon: "lucide:search",
       },
     ],
