@@ -1,21 +1,24 @@
----
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
-type Props = {
-  className?: string;
-};
-
+type Props = { className?: string };
 const { className } = Astro.props;
 ---
 
-<footer class={cn("border-t", className)}>
+<footer class={cn("border-t bg-background", className)}>
   <div class="container flex flex-col items-center justify-center py-14 text-center space-y-6">
 
-    <!-- 🪩 TikTok Embed Section -->
-    <div class="w-full flex justify-center">
+    <!-- 🪩 TikTok Embed Section with smooth fade -->
+    <div class="relative w-full flex justify-center">
+      <!-- Dark placeholder to avoid flash -->
+      <div
+        id="tiktok-placeholder"
+        class="absolute inset-0 bg-background animate-pulse rounded-xl"
+        style="max-width: 780px; min-width: 288px; height: 200px;"
+      ></div>
+
       <blockquote
-        class="tiktok-embed"
+        class="tiktok-embed opacity-0 transition-opacity duration-700"
         cite="https://www.tiktok.com/@twerksocial"
         data-unique-id="twerksocial"
         data-embed-type="creator"
@@ -33,7 +36,24 @@ const { className } = Astro.props;
       </blockquote>
     </div>
 
-    <script is:inline async src="https://www.tiktok.com/embed.js"></script>
+    <!-- Async TikTok Embed Loader -->
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const script = document.createElement("script");
+        script.src = "https://www.tiktok.com/embed.js";
+        script.async = true;
+        script.onload = () => {
+          const embed = document.querySelector(".tiktok-embed");
+          const placeholder = document.getElementById("tiktok-placeholder");
+          if (embed && placeholder) {
+            embed.classList.remove("opacity-0");
+            embed.classList.add("opacity-100");
+            placeholder.remove();
+          }
+        };
+        document.body.appendChild(script);
+      });
+    </script>
 
     <!-- 💖 Footer Base -->
     <div class="border-t w-full pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -47,21 +67,3 @@ const { className } = Astro.props;
         >
           Wizard of Hahz
         </a>.
-        Download a{" "}
-        <a
-          href="https://phantom.app/download"
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          Phantom Wallet
-        </a>{" "}
-        for tipping.
-      </p>
-
-      <div class="flex items-center justify-center">
-        <ThemeToggle client:load />
-      </div>
-    </div>
-  </div>
-</footer>
