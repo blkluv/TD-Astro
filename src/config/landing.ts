@@ -54,83 +54,96 @@ export const infos: InfoLdg[] = [
 
 export const features = [
   {
-    title: "Feature 1",
+    title: "💃 Will Stormiiy receive ₿1,000 in $WATAA by 12/1/25?",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Lock in your YE ✅ or NO ❌. Every prediction fuels the creator economy — payouts verified on-chain via Solana Phantom 🏦 testnet.",
+    link: "https://yeno.twerk.dance",
   },
   {
-    title: "Feature 2",
+    title: "🎙️ Will Ice Spice join TWERK.DANCE by 2026?",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Lock in your YE ✅ or NO ❌. Every prediction fuels the creator economy — payouts verified on-chain via Solana Phantom 🏦 testnet",
+    link: "https://yeno.twerk.dance",
   },
   {
-    title: "Feature 3",
+    title: "🏆 Will the #TwerkMerica TikTok Effect flag break 1 million views?",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Lock in your YE ✅ or NO ❌. Every prediction fuels the creator economy — payouts verified on-chain via Solana Phantom 🏦 testnet",
+    link: "https://yeno.twerk.dance",
   },
   {
-    title: "Feature 4",
+    title: "💸 Will Bitcoin $WATTA hit 10 BTC in trading volume by 2026?",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Lock in your YE ✅ or NO ❌. Every prediction fuels the creator economy — payouts verified on-chain via Solana Phantom 🏦 testnet",
+    link: "https://yeno.twerk.dance",
   },
   {
-    title: "Feature 5",
+    title: "🪩 Will any Twerkr sell a 7-figure NFT before year-end?",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
+      "Lock in your YE ✅ or NO ❌. Every prediction fuels the creator economy — payouts verified on-chain via Solana Phantom 🏦 testnet",
+    link: "https://yeno.twerk.dance",
   },
   {
-    title: "Feature 6",
+    title: "🌈 Will YENO outperform Solana in 2026?",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Cast your YE or NO on the ultimate chain rivalry. All wagers transparently tracked across Base + BTC.",
+    link: "https://yeno.twerk.dance",
   },
 ];
 
 export const testimonials = [
   {
-    name: "John Doe",
-    job: "Full Stack Developer",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "💃 BIO.TWERK.DANCE",
+    job: "Social for Twerkrz",
+    image: "/images/blog/placeholder-about.jpg",
     review:
-      "The next-saas-stripe-starter repo has truly revolutionized my development workflow. With its comprehensive features and seamless integration with Stripe, I've been able to build and deploy projects faster than ever before. The documentation is clear and concise, making it easy to navigate through the setup process. I highly recommend next-saas-stripe-starter to any developer.",
+      "Join the Web5 social network built for Twerkrz and fans. Stream, earn, and connect — verified by Phantom 🏦 + What3Words 📍.",
+    link: "https://bio.twerk.dance",
+    cta: "Create Your Bio",
   },
   {
-    name: "Alice Smith",
-    job: "UI/UX Designer",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    name: "🏆 MARKET",
+    job: "OpenSea Marketplace",
+    image: "/images/blog/placeholder-about.jpg",
     review:
-      "Thanks to next-saas-stripe-starter, I've been able to create modern and attractive user interfaces in record time. The starter kit provides a solid foundation for building sleek and intuitive designs, allowing me to focus more on the creative aspects of my work.",
+      "Twerkrz can earn 5% royalties on secondary sales of their twerk NFTs flipped. Buy, sell, and collect 1-of-1 digital assets on OpenSea.",
+    link: "https://opensea.io/collection/twerk-dance",
+    cta: "Buy Twerk Skins",
   },
   {
-    name: "David Johnson",
-    job: "DevOps Engineer",
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "🎵 TOK.TWERK.DANCE",
+    job: "Scroll and Buy Tokenized Content",
+    image: "/images/blog/placeholder-about.jpg",
     review:
-      "Thanks to next-saas-stripe-starter, I was able to streamline the entire process and get payments up and running in no time.",
+      "Twerk TOK is a tokenized content platform where you can buy, sell, and collect 1-of-1 digital assets. Own your twerk moments.",
+    link: "https://tok.twerk.dance",
+    cta: "TikTok Your Twerk",
   },
   {
-    name: "Michael Wilson",
-    job: "Project Manager",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "📺 NFTV.TWERK.DANCE",
+    job: "YouTube for Twerking",
+    image: "/images/blog/placeholder-about.jpg",
     review:
-      "I'm impressed by the quality of code and clear documentation of next-saas-stripe-starter. Kudos to the team!",
+      "We built a Bitcoin NFT video platform for Twerkers. Upload, monetize, and share your twerk videos with the world to earn Bitcoin Zap tips.",
+    link: "https://mic.twerk.dance",
+    cta: "4 Play Twerk Videos",
   },
   {
-    name: "Sophia Garcia",
-    job: "Data Analyst",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "💸 WATAA.MENU",
+    job: "Solana chat $WATAA tip menu",
+    image: "/images/blog/placeholder-about.jpg",
     review:
-      "next-saas-stripe-starter provided me with the tools I needed to efficiently manage user data. Thank you so much!",
+      "Chat about how much Solana $WATAA you need before booking a Livestream.",
+    link: "https://market.twerk.dance",
+    cta: "Chat with WATAA",
   },
   {
-    name: "Emily Brown",
-    job: "Marketing Manager",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "💎 GEMZ.TWERK.DANCE",
+    job: "Polkadot Kusuma NFT Marketplace",
+    image: "/images/blog/placeholder-about.jpg",
     review:
-      "next-saas-stripe-starter has been an invaluable asset in my role as a marketing manager. With its seamless integration with Stripe, I've been able to launch targeted marketing campaigns with built-in payment functionality, allowing us to monetize our products and services more effectively.",
+      "Tokenized selfies on Polkadot Kusama. Buy, sell, and collect 1-of-1 NFTs with $KSM.",
+    link: "https://gemz.twerk.dance",
+    cta: "HODL GEMZ",
   },
 ];
