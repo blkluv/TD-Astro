@@ -1,46 +1,46 @@
 ---
-import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icon } from "astro-icon/components";
-
-type Props = {
-  className?: string;
-};
-
-const { className } = Astro.props;
+import TDLogo from "@/assets/TD_logo.svg"; // ✅ Make sure file exists in /src/assets/
 ---
 
 <header
   class={cn(
-    "flex items-center h-16 md:h-18 z-50 sticky top-0 bg-background",
-    className
+    "flex items-center h-20 md:h-24 z-50 sticky top-0 bg-background backdrop-blur-lg shadow-lg border-b border-border"
   )}
 >
   <div class="relative container flex items-center justify-between w-full">
+    <!-- 🪩 Desktop Header Left -->
     <div class="flex items-center gap-6 md:gap-8 lg:gap-10">
-      <a href="/" class="hidden items-center space-x-2 md:flex">
-        <Icon name="stars-outline" class="size-8" />
-        <span class="hidden font-bold sm:inline-block">
-          {siteConfig.name}
-        </span>
+      <a href="https://twerk.dance" class="hidden items-center space-x-3 md:flex group">
+        <img
+          src={TDLogo.src}
+          alt="TWERK·DANCE Logo"
+          class="h-12 w-auto md:h-14 lg:h-16 object-contain transition-all duration-300 group-hover:scale-105"
+          loading="eager"
+        />
       </a>
 
       <slot name="mobile-nav-header" />
-
       <div class="hidden md:flex">
         <slot name="left-header" />
       </div>
     </div>
 
-    <!-- logo mobile center -->
+    <!-- 📱 Mobile Logo Center -->
     <div
-      class="absolute top-1/2 left-1/2 -translate-x-4 -translate-y-4 md:hidden"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:hidden"
     >
-      <a href="/" aria-label="Astronomy homepage">
-        <Icon name="stars-outline" class="size-8" />
+      <a href="https://twerk.dance" aria-label="TWERK·DANCE homepage" class="block">
+        <img
+          src={TDLogo.src}
+          alt="TWERK·DANCE Logo"
+          class="h-10 w-auto sm:h-12 object-contain transition-all duration-300 hover:scale-105"
+          loading="eager"
+        />
       </a>
     </div>
 
+    <!-- 🎛️ Right Header Slot (for nav, buttons, etc.) -->
     <slot name="right-header" />
   </div>
 </header>

@@ -1,13 +1,13 @@
 import type { SidebarNavItem, SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Astronomy",
+  name: "TWERK.DANCE",
   description:
-    "An modern example app built using Astro v4 & shadcn/ui. Inspired by shadcn/taxonomy.",
-  url: "https://astro-nomy.vercel.app",
-  ogImage: "https://astro-nomy.vercel.app/og.jpg",
+    "We made twerking a blockchain sport powered by $WATAA",
+  url: "https://twerk.dance",
+  ogImage: "https://bio.twerk.dance/wp-content/uploads/2025/11/TWERK.DANCE-1080.png",
   links: {
-    twitter: "https://twitter.com/miickasmt",
+    twitter: "https://twitter.com/twerkdancerz",
     github: "https://github.com/mickasmt/astro-nomy",
   },
 };

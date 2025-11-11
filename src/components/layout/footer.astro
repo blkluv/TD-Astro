@@ -1,9 +1,6 @@
 ---
-import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { footerLinks, siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icon } from "astro-icon/components";
 
 type Props = {
   className?: string;
@@ -13,71 +10,56 @@ const { className } = Astro.props;
 ---
 
 <footer class={cn("border-t", className)}>
-  <div
-    class="container grid grid-cols-1 gap-6 py-14 sm:grid-cols-2 md:grid-cols-5"
-  >
-    {
-      footerLinks.map((section) => (
-        <div>
-          <span class="text-sm font-medium text-foreground">
-            {section.title}
-          </span>
-          <ul class="mt-4 list-inside space-y-3">
-            {section.items?.map((link) => (
-              <li>
-                <a
-                  href={link.href}
-                  class="text-sm text-muted-foreground hover:text-primary"
-                >
-                  {link.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))
-    }
-    <div class="flex flex-col items-end md:col-span-2">
-      Form Newsletter coming soon!
-      <!-- <NewsletterForm client:only="react" /> -->
-    </div>
-  </div>
+  <div class="container flex flex-col items-center justify-center py-14 text-center space-y-6">
 
-  <div class="border-t py-4">
-    <div class="container flex items-center justify-between">
-      <!-- <span class="text-muted-foreground text-sm">
-        Copyright &copy; 2024. All rights reserved.
-      </span> -->
-      <p class="text-left text-sm text-muted-foreground">
-        Built by{" "}
+    <!-- 🪩 TikTok Embed Section -->
+    <div class="w-full flex justify-center">
+      <blockquote
+        class="tiktok-embed"
+        cite="https://www.tiktok.com/@twerksocial"
+        data-unique-id="twerksocial"
+        data-embed-type="creator"
+        style="max-width: 780px; min-width: 288px;"
+      >
+        <section>
+          <a
+            target="_blank"
+            href="https://www.tiktok.com/@twerksocial?refer=creator_embed"
+            class="font-semibold text-lg text-foreground hover:text-primary"
+          >
+            @twerksocial
+          </a>
+        </section>
+      </blockquote>
+    </div>
+
+    <script is:inline async src="https://www.tiktok.com/embed.js"></script>
+
+    <!-- 💖 Footer Base -->
+    <div class="border-t w-full pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-muted-foreground text-center md:text-left">
+        Made with LUV by{" "}
         <a
-          href={siteConfig.links.twitter}
+          href="https://t.me/hahznft"
           target="_blank"
           rel="noreferrer"
           class="font-medium underline underline-offset-4"
         >
-          mickasmt
-        </a>
-        . Hosted on{" "}
-        <a
-          href="https://vercel.com"
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          Vercel
+          Wizard of Hahz
         </a>.
+        Download a{" "}
+        <a
+          href="https://phantom.app/download"
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium underline underline-offset-4"
+        >
+          Phantom Wallet
+        </a>{" "}
+        for tipping.
       </p>
 
-      <div class="flex items-center gap-3">
-        <a
-          href={siteConfig.links.github}
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          <Icon name="github" class="size-5" />
-        </a>
+      <div class="flex items-center justify-center">
         <ThemeToggle client:load />
       </div>
     </div>
