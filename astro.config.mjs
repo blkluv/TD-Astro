@@ -1,16 +1,19 @@
-import db from "@astrojs/db";
-import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel";
-import icon from "astro-icon";
 import { defineConfig } from "astro/config";
+
+// Integrations
+import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
+import mdx from "@astrojs/mdx";
+import db from "@astrojs/db";
+import icon from "astro-icon";
+import vercel from "@astrojs/vercel"; // ✅ correct import, no serverless/edge
 import simpleStackForm from "simple-stack-form";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://twerk.dance",
+
   integrations: [
     mdx({
       syntaxHighlight: "shiki",
@@ -28,8 +31,17 @@ export default defineConfig({
     db(),
     simpleStackForm(),
   ],
+
   output: "server",
+
   adapter: vercel({
     analytics: true,
+    edgeMiddleware: false, // safer for Astro DB
   }),
+
+  vite: {
+    ssr: {
+      noExternal: ["astro-icon", "simple-stack-form"],
+    },
+  },
 });

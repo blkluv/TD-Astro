@@ -1,6 +1,17 @@
+// src/config/landing.ts
 import type { InfoLdg } from "@/types";
 
-export const infos: InfoLdg[] = [
+// 🧠 Extend InfoLdg list item type to support emojis + links safely
+type InfoLdgWithLinks = Omit<InfoLdg, "list"> & {
+  list: {
+    title: string;
+    description: string;
+    icon: string; // now supports emoji or lucide icon
+    link?: string;
+  }[];
+};
+
+export const infos: InfoLdgWithLinks[] = [
   {
     title: "💃 SOCIAL FOR TWERKRZ",
     description:
@@ -29,31 +40,36 @@ export const infos: InfoLdg[] = [
     ],
   },
   {
-    title: "Seamless Integration",
+    title: "⚡ SEAMLESS INTEGRATION",
     description:
-      "Integrate our open-source SaaS seamlessly into your existing workflows. Effortlessly connect with your favorite tools and services for a streamlined experience.",
+      "Integrate our open-source Web5 tools seamlessly into your TWERK.DANCE experience. Connect your Phantom Wallet 🏦 + What3Words 📍 for proof-of-twerk.",
     image: "/images/blog/placeholder-about.jpg",
     list: [
       {
-        title: "Flexible",
+        title: "🪩 Flexible",
         description:
-          "Customize your integrations to fit your unique requirements.",
-        icon: "lucide:laptop",
+          "Customize your integrations to fit your unique twerk style.",
+        icon: "🪩",
+        link: "https://bio.twerk.dance",
       },
       {
-        title: "Efficient",
-        description: "Streamline your processes and reducing manual effort.",
-        icon: "lucide:search",
+        title: "🚀 Efficient",
+        description: "Streamline your processes and reduce manual effort.",
+        icon: "🚀",
+        link: "https://bio.twerk.dance",
       },
       {
-        title: "Reliable",
+        title: "🔒 Reliable",
         description:
-          "Rely on our robust infrastructure and comprehensive documentation.",
-        icon: "lucide:settings",
+          "Rely on our secure blockchain infrastructure for every ReelView.",
+        icon: "🔒",
+        link: "https://bio.twerk.dance",
       },
     ],
   },
 ];
+
+// 🪩 Keep your other exports unchanged below ↓
 
 export const features = [
   {

@@ -1,5 +1,5 @@
 {
-  "name": "astro-nomy",
+  "name": "twerk",
   "type": "module",
   "version": "0.1.0",
   "scripts": {
@@ -58,5 +58,8 @@
     "mdast-util-toc": "^7.1.0",
     "remark": "^15.0.1",
     "unist-util-visit": "^5.0.0"
+  },
+  "resolutions": {
+    "@astrojs/compiler": "2.13.0"
   }
 }
