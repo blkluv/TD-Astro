@@ -2,14 +2,14 @@
 import { Image } from "astro:assets";
 ---
 
-<section>
+<section class="bg-background">
   <div class="py-32">
     <div class="container max-w-7xl">
       <div class="relative">
         <div class="relative z-10 grid grid-cols-6 gap-3">
           {/* First card */}
           <div
-            class="relative col-span-full flex overflow-hidden rounded-2xl border bg-background p-8 lg:col-span-2"
+            class="relative col-span-full flex overflow-hidden rounded-2xl border bg-card p-8 lg:col-span-2"
           >
             <div class="relative m-auto size-fit">
               <div class="relative flex h-24 w-56 items-center">
@@ -39,7 +39,7 @@ import { Image } from "astro:assets";
 
           {/* Second card */}
           <div
-            class="relative col-span-full overflow-hidden rounded-2xl border bg-background p-8 sm:col-span-3 lg:col-span-2"
+            class="relative col-span-full overflow-hidden rounded-2xl border bg-card p-8 sm:col-span-3 lg:col-span-2"
           >
             <div>
               <div
@@ -93,8 +93,7 @@ import { Image } from "astro:assets";
                 </svg>
               </div>
               <div class="relative z-10 mt-8 space-y-1.5 text-center">
-                <h2 class="text-lg font-medium text-foreground">
-                  AUTHENTIC FAN LUV
+                  <h2 class="text-lg font-medium text-white"></h2>AUTHENTIC FAN LUV
                 </h2>
                 <p class="text-muted-foreground">
                   No capping on who's grossing the most or who has the most fans.
@@ -103,71 +102,70 @@ import { Image } from "astro:assets";
             </div>
           </div>
 
-{/* Third card */}
-<div
-  class="relative col-span-full overflow-hidden rounded-2xl border bg-background p-8 sm:col-span-3 lg:col-span-2"
->
-  <div>
-    <div>
-      <svg
-        class="h-32 w-full"
-        viewBox="0 0 386 123"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="386" height="123" rx="10"></rect>
-
-        {/* simplified wave animation only */}
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M3 123C3 123 14.3298 94.153 35.1282 88.0957C55.9266 82.0384 65.9333 80.5508 65.9333 80.5508C65.9333 80.5508 80.699 80.5508 92.1777 80.5508C103.656 80.5508 100.887 63.5348 109.06 63.5348C117.233 63.5348 117.217 91.9728 124.78 91.9728C132.343 91.9728 142.264 78.03 153.831 80.5508C165.398 83.0716 186.825 91.9728 193.761 91.9728C200.697 91.9728 206.296 63.5348 214.07 63.5348C221.844 63.5348 238.653 93.7771 244.234 91.9728C249.814 90.1684 258.8 60 266.19 60C272.075 60 284.1 88.057 286.678 88.0957C294.762 88.2171 300.192 72.9284 305.423 72.9284C312.323 72.9284 323.377 65.2437 335.553 63.5348C347.729 61.8259 348.218 82.07 363.639 80.5508C367.875 80.1335 372.949 82.2017 376.437 87.1008C379.446 91.3274 381.054 97.4325 382.521 104.647C383.479 109.364 382.521 123 382.521 123"
-          fill="url(#paint0_linear_0_106)"
-        ></path>
-
-        <path
-          class="text-indigo-600/60"
-          d="M3 121.077C3 121.077 15.3041 93.6691 36.0195 87.756C56.7349 81.8429 66.6632 80.9723 66.6632 80.9723C66.6632 80.9723 80.0327 80.9723 91.4656 80.9723C102.898 80.9723 100.415 64.2824 108.556 64.2824C116.696 64.2824 117.693 92.1332 125.226 92.1332C132.759 92.1332 142.07 78.5115 153.591 80.9723C165.113 83.433 186.092 92.1332 193 92.1332C199.908 92.1332 205.274 64.2824 213.017 64.2824C220.76 64.2824 237.832 93.8946 243.39 92.1332C248.948 90.3718 257.923 60.5 265.284 60.5C271.145 60.5 283.204 87.7182 285.772 87.756C293.823 87.8746 299.2 73.0802 304.411 73.0802C311.283 73.0802 321.425 65.9506 333.552 64.2824C345.68 62.6141 346.91 82.4553 362.27 80.9723C377.629 79.4892 383 106.605 383 106.605"
-          stroke="currentColor"
-          stroke-width="3"
-        ></path>
-
-        <defs>
-          <linearGradient
-            id="paint0_linear_0_106"
-            x1="3"
-            y1="60"
-            x2="3"
-            y2="123"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop class="text-purple-600/80" stop-color="currentColor"></stop>
-            <stop
-              class="text-white dark:text-transparent"
-              offset="1"
-              stop-color="currentColor"
-              stop-opacity="0.103775"
-            ></stop>
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-
-    <div class="relative z-10 mt-8 space-y-1.5 text-center">
-      <h2 class="text-lg font-medium text-foreground">
-        BITCOIN $WATAA
-      </h2>
-      <p class="text-muted-foreground">
-        Starts at $0.00000008 just like Bitcoin started from the bottom now its $100k+.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-          {/* Second row */}
+          {/* Third card */}
           <div
-            class="relative col-span-full overflow-hidden rounded-2xl border bg-background p-8 lg:col-span-3"
+            class="relative col-span-full overflow-hidden rounded-2xl border bg-card p-8 sm:col-span-3 lg:col-span-2"
+          >
+            <div>
+              <div>
+                <svg
+                  class="h-32 w-full"
+                  viewBox="0 0 386 123"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="386" height="123" rx="10"></rect>
+
+                  {/* simplified wave animation only */}
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 123C3 123 14.3298 94.153 35.1282 88.0957C55.9266 82.0384 65.9333 80.5508 65.9333 80.5508C65.9333 80.5508 80.699 80.5508 92.1777 80.5508C103.656 80.5508 100.887 63.5348 109.06 63.5348C117.233 63.5348 117.217 91.9728 124.78 91.9728C132.343 91.9728 142.264 78.03 153.831 80.5508C165.398 83.0716 186.825 91.9728 193.761 91.9728C200.697 91.9728 206.296 63.5348 214.07 63.5348C221.844 63.5348 238.653 93.7771 244.234 91.9728C249.814 90.1684 258.8 60 266.19 60C272.075 60 284.1 88.057 286.678 88.0957C294.762 88.2171 300.192 72.9284 305.423 72.9284C312.323 72.9284 323.377 65.2437 335.553 63.5348C347.729 61.8259 348.218 82.07 363.639 80.5508C367.875 80.1335 372.949 82.2017 376.437 87.1008C379.446 91.3274 381.054 97.4325 382.521 104.647C383.479 109.364 382.521 123 382.521 123"
+                    fill="url(#paint0_linear_0_106)"
+                  ></path>
+
+                  <path
+                    class="text-indigo-600/60"
+                    d="M3 121.077C3 121.077 15.3041 93.6691 36.0195 87.756C56.7349 81.8429 66.6632 80.9723 66.6632 80.9723C66.6632 80.9723 80.0327 80.9723 91.4656 80.9723C102.898 80.9723 100.415 64.2824 108.556 64.2824C116.696 64.2824 117.693 92.1332 125.226 92.1332C132.759 92.1332 142.07 78.5115 153.591 80.9723C165.113 83.433 186.092 92.1332 193 92.1332C199.908 92.1332 205.274 64.2824 213.017 64.2824C220.76 64.2824 237.832 93.8946 243.39 92.1332C248.948 90.3718 257.923 60.5 265.284 60.5C271.145 60.5 283.204 87.7182 285.772 87.756C293.823 87.8746 299.2 73.0802 304.411 73.0802C311.283 73.0802 321.425 65.9506 333.552 64.2824C345.68 62.6141 346.91 82.4553 362.27 80.9723C377.629 79.4892 383 106.605 383 106.605"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  ></path>
+
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_0_106"
+                      x1="3"
+                      y1="60"
+                      x2="3"
+                      y2="123"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop class="text-purple-600/80" stop-color="currentColor"></stop>
+                      <stop
+                        class="text-white dark:text-transparent"
+                        offset="1"
+                        stop-color="currentColor"
+                        stop-opacity="0.103775"
+                      ></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <div class="relative z-10 mt-8 space-y-1.5 text-center">
+                <h2 class="text-lg font-medium text-white">
+                  BITCOIN $WATAA
+                </h2>
+                <p class="text-muted-foreground">
+                  Starts at $0.00000008 just like Bitcoin started from the bottom now its $100k+.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Fourth card - SOLANA $WATAA */}
+          <div
+            class="relative col-span-full overflow-hidden rounded-2xl border bg-card p-8 lg:col-span-3"
           >
             <div class="grid sm:grid-cols-2">
               <div
@@ -192,7 +190,7 @@ import { Image } from "astro:assets";
                   </svg>
                 </div>
                 <div class="space-y-2">
-                  <h2 class="text-lg font-medium text-foreground">
+                  <h2 class="text-lg font-medium text-white">
                     SOLANA $WATAA
                   </h2>
                   <p class="text-muted-foreground">
@@ -250,8 +248,9 @@ import { Image } from "astro:assets";
             </div>
           </div>
 
+          {/* Fifth card - LEADERBOARD */}
           <div
-            class="relative col-span-full overflow-hidden rounded-2xl border bg-background p-8 lg:col-span-3"
+            class="relative col-span-full overflow-hidden rounded-2xl border bg-card p-8 lg:col-span-3"
           >
             <div class="grid h-full sm:grid-cols-2">
               <div
@@ -281,7 +280,7 @@ import { Image } from "astro:assets";
                   </svg>
                 </div>
                 <div class="space-y-2">
-                  <h2 class="text-lg font-medium text-foreground">
+                  <h2 class="text-lg font-medium text-white">
                     LEADERBOARD
                   </h2>
                   <p class="text-muted-foreground">
@@ -322,14 +321,14 @@ import { Image } from "astro:assets";
                         width={100}
                         height={100}
                         class="size-full rounded-full border"
-                        src="https://pbs.twimg.com/media/DaRUJK_XcAAdn_S?format=jpg&name=100x100"
+                        src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2024-02/ice-spice-1x1-jp-240201-be1081.jpg"
                         alt="fake-avatar"
                       />
                     </div>
                     <span
                       class="block h-fit rounded-md border bg-muted/50 px-2 py-1 text-xs"
                     >
-                      Maliah
+                      Ice Spice
                     </span>
                   </div>
                   <div
@@ -345,7 +344,7 @@ import { Image } from "astro:assets";
                         width={100}
                         height={100}
                         class="size-full rounded-full border"
-                        src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQt_QnMq0kUTk9zGI8JGLy9QLrhdMwDgswA&s"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQt_QnMq0kUTk9zGI8JGLy9QLrhdMwDgswA&s"
                         alt="fake-avatar"
                       />
                     </div>

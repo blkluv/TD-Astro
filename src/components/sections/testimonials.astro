@@ -1,66 +1,52 @@
 ---
 import { testimonials } from "@/config/landing";
-import { Image } from "astro:assets";
 import HeaderSection from "./header-section.astro";
-import { Button } from "@/components/ui/button";
 ---
 
 <section>
   <div class="container flex max-w-7xl flex-col gap-10 py-32 sm:gap-y-16">
     <HeaderSection
       label="Portals"
-      title="Explore the TWERK.DANCE ecosystem."
-      subtitle="Each portal is its own Web5 experience, unlock private portals by holding $WATAA in your wallet as the key."
+      title="Explore the TWERK.DANCE ecosystem"
+      subtitle="Each portal is its own Web5 experience, unlock private portals by holding $WATAA in your wallet as the key"
     />
 
-    <div class="column-1 gap-5 space-y-5 md:columns-2 lg:columns-3 xl:columns-4">
-      {
-        testimonials.map((item) => (
-          <div class="break-inside-avoid">
-            <div class="relative rounded-xl border bg-muted/25 hover:bg-muted/40 transition-colors">
-              <div class="flex flex-col px-4 py-5 sm:p-6">
-                <div class="relative mb-4 flex items-center gap-3">
-                  <span class="relative inline-flex size-10 shrink-0 items-center justify-center rounded-full text-base">
-                    <Image
-                      width={100}
-                      height={100}
-                      class="size-full rounded-full border"
-                      src={item.image}
-                      alt={item.name}
-                    />
-                  </span>
-                  <div>
-                    <p class="text-sm font-semibold text-foreground">{item.name}</p>
-                    <p class="text-sm text-muted-foreground">{item.job}</p>
-                  </div>
-                </div>
-
-                <q class="block text-muted-foreground mb-3">{item.review}</q>
-
-                {
-                  item.link && (
-                    <Button
-                      variant="secondary"
-                      size="sm"
-                      rounded="xl"
-                      className="px-4 w-fit"
-                    >
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex items-center gap-2"
-                      >
-                        <span>{item.cta ?? "Visit Portal"}</span>
-                      </a>
-                    </Button>
-                  )
-                }
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {testimonials.map((item, index) => {
+        // Remove debug text and fix emoji display
+        const cleanName = item.name.replace(/[^\w\s\.\-]/g, '').trim(); // Remove non-alphanumeric chars (emojis)
+        
+        return (
+          <div key={index} class="break-inside-avoid rounded-xl border bg-muted/25 p-6 hover:bg-muted/40 transition-colors">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flex size-10 items-center justify-center rounded-full border bg-background text-xl">
+                {/* Manually set emojis based on the item */}
+                {index === 0 && "💃"}
+                {index === 1 && "🏆"} 
+                {index === 2 && "🎵"}
+                {index === 3 && "📺"}
+                {index === 4 && "💸"}
+                {index === 5 && "💎"}
+              </div>
+              <div>
+                <p class="font-semibold text-foreground">{cleanName}</p>
+                <p class="text-sm text-muted-foreground">{item.job}</p>
               </div>
             </div>
+            
+            <p class="text-muted-foreground mb-4">{item.review}</p>
+            
+            <a 
+              href={item.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center gap-1"
+            >
+              {item.cta || "Visit Portal"} →
+            </a>
           </div>
-        ))
-      }
+        );
+      })}
     </div>
   </div>
 </section>

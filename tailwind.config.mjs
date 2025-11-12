@@ -26,10 +26,10 @@ export default {
         18: "4.5rem",
       },
       colors: {
-        // 🩶 Base fallback colors for safety
+        // 🎨 Updated colors with nude background for light mode
         background: {
-          DEFAULT: "#ffffff", // Light mode base
-          dark: "#000000", // Dark mode base
+          DEFAULT: "#F3EFE3", // Changed from #ffffff to your nude color
+          dark: "#000000", // Dark mode remains black
           200: "hsl(var(--background-200, 220 14% 96%))",
         },
         foreground: {
