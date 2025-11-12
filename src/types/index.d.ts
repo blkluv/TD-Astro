@@ -2,21 +2,27 @@ export type NavItem = {
   title: string;
   href: string;
   disabled?: boolean;
+  style?: string; // ✅ Added style property
 };
+
 export type MenuItem = NavItem & {
   image?: string;
   description?: string;
   launched?: boolean;
   external?: boolean;
   forceReload?: boolean;
+  style?: string; // ✅ Added style property
 };
 
-export type MainNavItem = NavItem;
+export type MainNavItem = NavItem & {
+  style?: string; // ✅ Added style property
+};
 
 export type SidebarNavItem = {
   title: string;
   disabled?: boolean;
   external?: boolean;
+  style?: string; // ✅ Added style property
 } & (
   | {
       href: string;
@@ -93,6 +99,7 @@ export type InfoList = {
   icon: string;
   title: string;
   description: string;
+  style?: string; // ✅ Added style property
 };
 
 export type InfoLdg = {
@@ -100,4 +107,5 @@ export type InfoLdg = {
   image: string;
   description: string;
   list: InfoList[];
-}
+  style?: string; // ✅ Added style property
+};

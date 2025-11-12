@@ -87,6 +87,7 @@ export const testimonials = [
 export const infos = [
   {
     title: "💃 SOCIAL FOR TWERKRZ",
+    titleClass: "text-white font-bold",
     description: "We are a social media platform designed for twerk enthusiasts. Our mission is to create a vibrant and inclusive tribe where twerk lovers can connect, share their passion, and celebrate the art of twerking.",
     image: "/images/blog/placeholder-about.jpg",
     list: [
