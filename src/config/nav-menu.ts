@@ -4,50 +4,51 @@ export const navMenuConfig: NavMenuConfig = {
   pagesNav: [
     {
       title: "Pages",
-      disabled: true, // 🚫 disables entire Pages dropdown
-      items: [
+      disabled: false,
+      items: [  // ✅ added "items" array wrapper (was missing)
         {
-          title: "Landing",
-          href: "/landing",
-          description: "A landing page template with differents sections.",
+          title: "Social",
+          href: "https://bio.twerk.dance",
+          description: "A social media for only Twerkrz and Fans.",
           image: "/images/examples/landing.jpg",
-          disabled: true,
+          disabled: false,
         },
         {
-          title: "Changelog",
+          title: "Challenges",
           href: "/releases",
-          description: "A reproduction of Starlog template with Tailwind CSS.",
+          description: "TikTok Challenges to Win Solana $WATAA.",
           image: "/images/examples/changelog.jpg",
-          disabled: true,
+          disabled: false,
         },
         {
-          title: "Waitlist",
-          href: "/waitlist",
+          title: "YE OR NO",
+          href: "https://yeno.twerk.dance",
           description:
-            "A waitlist form using Astro DB, React Hook Form & Sonner. Static page.",
+            "A prediction market for Twerkz and Fans to bet on the next big thing.",
           image: "/images/examples/waitlist.jpg",
           forceReload: true,
-          disabled: true,
+          disabled: false,
         },
         {
-          title: "Pricing",
-          href: "/pricing",
-          description: "Pricing cards, FAQs and more content with price.",
+          title: "WATAA.MENU",
+          href: "https://wataa.menu",
+          description:
+            "Chat with a Twerkr in exchange for Solana $WATAA. Aka The WATAA Cooler.",
           image: "/images/examples/pricing.jpg",
-          disabled: true,
+          disabled: false,
         },
         {
           title: "About",
           href: "/about",
-          description: "A simple page with a masonry gallery and little text.",
+          description: "A lil something about us.",
           image: "/images/examples/about.jpg",
           disabled: true,
         },
         {
-          title: "Newsletter",
-          href: "/newsletter",
+          title: "TOK",
+          href: "https://tok.twerk.dance",
           description:
-            "A newsletter form using Astro DB & Simple Stack Form. Counter display!",
+            "A TikTok-like platform for Twerkrz and Fans to share and sell their content.",
           image: "/images/examples/newsletter.jpg",
           disabled: true,
         },
@@ -101,19 +102,12 @@ export const navMenuConfig: NavMenuConfig = {
           title: "Authentification",
           href: "/auth",
           description:
-            "Implement an authentification using Astro DB & Lucia",
+            "Implement an authentification using Astro DB & Lucia.",
           disabled: true,
         },
       ],
     },
   ],
 
-  links: [
-    // You can still add or show single links if you want
-    // {
-    //   title: "TWERK.DANCE Home",
-    //   href: "/",
-    //   description: "Back to homepage",
-    // },
-  ],
+  links: [],
 };
